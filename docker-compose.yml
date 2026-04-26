@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: getNews_postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - getNews-network
+
+  backend:
+    build: 
+      context: ./backend_code_base-main
+      dockerfile: Dockerfile
+    container_name: getNews_backend
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      SPRING_PROFILES_ACTIVE: docker
+    depends_on:
+      - postgres
+    networks:
+      - getNews-network
+
+  frontend:
+    build:
+      context: ./frontend_code_base-main
+      dockerfile: Dockerfile
+    container_name: getNews_frontend
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      REACT_APP_API_URL: http://backend:8080
+    depends_on:
+      - backend
+    networks:
+      - getNews-network
+
+volumes:
+  postgres_data:
+
+networks:
+  getNews-network:
+    driver: bridge
