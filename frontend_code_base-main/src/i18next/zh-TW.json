@@ -1,0 +1,15 @@
+{
+  "COMMON": { "SYSTEM_TITLE": "Thermal 熱管理系統" },
+  "LOGIN": {
+    "SYSTEM_NAME": "RD 虛擬實驗室管理系統",
+    "TITLE": "AI驅動熱管理，加速迭代熱模擬",
+    "SESSION_EXPIRED_TITLE": "登入過期",
+    "SESSION_EXPIRED_CONTENT": "請重新登入",
+    "SIGNING_IN": "登入中..."
+  },
+  "NOTICE": {
+    "SYSTEM_ERROR": "系統錯誤，請稍後再試。",
+    "OV_ERROR": "OV 暫時無法使用"
+  },
+  "PROJECT_MANAGEMENT": { "TITLE": "專案管理" }
+}

@@ -1,0 +1,39 @@
+.custom-menu {
+  background-color: transparent;
+}
+
+.custom-menu :global(.ant-menu-item) {
+  margin: 0;
+  height: 56px;
+  line-height: 24px;
+  border-left: 4px solid transparent;
+  border-radius: 0px !important;
+  width: 100%;
+}
+
+.custom-menu :global(.ant-menu-item) :global(.ant-menu-title-content) {
+  display: flex;
+  margin-inline-start: 12px;
+}
+
+.custom-menu :global(.ant-menu-item .anticon) {
+  font-size: 18px;
+}
+
+/* Styling for the selected menu item */
+.custom-menu :global(.ant-menu-item-selected) {
+  background-color: transparent !important;
+  color: #9ac258 !important;
+  border-color: #9ac258 !important;
+  border-radius: 0px !important;
+}
+
+.custom-menu :global(.ant-menu-item-selected:active) {
+  background-color: transparent !important;
+  color: #9ac258 !important;
+  border-color: #9ac258 !important;
+}
+
+.custom-menu :global(.ant-menu-item-selected) :global(.ant-menu-item-icon.anticon) {
+  color: #9ac258;
+}

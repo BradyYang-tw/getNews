@@ -1,0 +1,8 @@
+.modal {
+  top: 200px !important;
+}
+
+.modal :global(.ant-modal-body) {
+  border: none !important;
+  padding: 0 30px;
+}

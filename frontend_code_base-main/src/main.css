@@ -1,0 +1,27 @@
+@import 'tailwindcss';
+@config "../tailwind.config.ts";
+
+:root {
+  --color-white-1: #ffffff;
+
+  --color-red-1: #ff4d4f;
+
+  --color-green-1: #52c41a;
+  --color-green-2: #9ac258;
+
+  --color-blue-1: #e6f4ff;
+  --color-blue-2: #1890ff;
+  --color-blue-3: #91caff;
+  --color-blue-4: #0d759f;
+  --color-blue-5: #0958d9;
+  --color-blue-6: #3d91b2;
+
+  --color-gray-1: #000000a6;
+  --color-gray-2: #203033;
+  --color-gray-3: #000000e5;
+  --color-gray-4: #d9d9d933;
+  --color-gray-5: #f0f0f0;
+  --color-gray-6: #888;
+  --color-gray-7: #fafafa;
+  --color-gray-8: #00000073;
+}

@@ -1,0 +1,15 @@
+{
+  "COMMON": { "SYSTEM_TITLE": "Thermal Management System" },
+  "LOGIN": {
+    "SYSTEM_NAME": "RD Virtual Laboratory Management System",
+    "TITLE": "AI-driven thermal management, accelerating iterative thermal simulations",
+    "SESSION_EXPIRED_TITLE": "Session Expired",
+    "SESSION_EXPIRED_CONTENT": "Please login again",
+    "SIGNING_IN": "Signing in..."
+  },
+  "NOTICE": {
+    "SYSTEM_ERROR": "System error, please try again later.",
+    "OV_ERROR": "OV is temporarily unavailable."
+  },
+  "PROJECT_MANAGEMENT": { "TITLE": "Project Management" }
+}
